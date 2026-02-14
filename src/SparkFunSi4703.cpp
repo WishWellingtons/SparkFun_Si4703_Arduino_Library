@@ -234,3 +234,10 @@ int Si4703_Breakout::getChannel() {
   channel += 875; //98 + 875 = 973
   return(channel);
 }
+
+uint8_t Si4703::getRSSI(){
+	readRegisters();
+	uint16_t statRSSI = si4703_registers[STATUSRSSI];
+	uint8_t RSSI = statRSSI & 0xFF; //lower 8 bits of STATUSRSSI holds the RSSI value. 
+	return RSSI;
+}
