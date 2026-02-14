@@ -37,6 +37,9 @@ Seek up/down - done 1/25/11
 
 The Si4703 breakout does work with line out into a stereo or other amplifier. Be sure to test with different length 3.5mm
 cables. Too short of a cable may degrade reception.
+
+---------------------------------------------------
+Added a getRSSI function to allow the user to easily access signal strength data. - WishWellingtons (William 14/2/26)
 */
 
 #ifndef SparkFunSi4703_h
@@ -53,7 +56,8 @@ class Si4703_Breakout
     void powerOn();					// call in setup
 	void setChannel(int channel);  	// 3 digit channel number
 	int seekUp(); 					// returns the tuned channel or 0
-	int seekDown(); 				
+	int seekDown(); 
+	uint8_t getRSSI();				// returns RSSI value (lower 8bits of [STATUSRSSI])
 	void setVolume(int volume); 	// 0 to 15
 	void readRDS(char* message, long timeout);	
 									// message should be at least 9 chars
