@@ -1,6 +1,6 @@
-SparkFun Si4703 Arduino Library - Edited by William Morris 
-Changes Made: 
--> Added getRSSI function
+SparkFun Si4703 Arduino Library - Edited by William Morris  
+Changes Made:  
+-> Added getRSSI function  
 -> Modified getRDS function
 ========================================
 
