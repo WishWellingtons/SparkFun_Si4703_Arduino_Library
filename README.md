@@ -1,7 +1,7 @@
 SparkFun Si4703 Arduino Library - Edited by William Morris  
 Changes Made:  
 -> Added getRSSI function  
--> Modified getRDS function
+-> Modified readRDS function
 ========================================
 
 <table class="table table-hover table-striped table-bordered">
